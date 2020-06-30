@@ -9,6 +9,25 @@
   </div>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "name" %>
+  </div>
+
+  <%- if resource_name == :buyer %>
+    <div class="field">
+      <%= f.label :address %><br />
+      <%= f.text_field :address, autocomplete: "address" %>
+    </div>
+  <% end %>
+
+  <%- if resource_name == :seller %>
+    <div class="field">
+      <%= f.label :phone %><br />
+      <%= f.text_field :phone, autocomplete: "phone" %>
+    </div>
+  <% end %>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
