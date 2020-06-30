@@ -1,0 +1,11 @@
+<div class='row'>
+  <%- if seller_signed_in? %>
+    <%= link_to "Sign out", destroy_seller_session_path, method: :delete %>
+  <%- end %>
+
+  <%- if buyer_signed_in? %>
+    <%= link_to "Sign out", destroy_buyer_session_path, method: :delete %>
+  <%- end %>
+
+  <h1 class='col-sm-6'>Hola</h1>
+</div>
